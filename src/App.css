@@ -10,7 +10,7 @@
   --hue: 0;
   --sat: 0%;
   --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-colo-dark: hsl(var(--hue), var(--sat), 0%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
@@ -121,7 +121,7 @@ img {
 }
 .section__subtitle {
   display: block;
-  font-family: var(--small-font-size);
+  font-size: var(--small-font-size);
   margin-bottom: 4rem;
 }
 
@@ -131,6 +131,7 @@ img {
 }
 
 /* === LAYOUT === */
+
 
 .container {
   max-width: 968px;
@@ -155,7 +156,7 @@ img {
 }
 
 .button:hover {
-  background-color: var(--title-colo-dark);
+  background-color: var(--title-color-dark);
 }
 
 .button__icon {
@@ -174,16 +175,30 @@ img {
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
   }
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 0 4rem;
+  }
 }
 
 /* For small devices */
 @media screen and (max-width: 576px) {
 }
 @media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
